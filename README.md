@@ -1,60 +1,59 @@
-🌍 Earthquake Damage Detection
-Project Overview
+# Earthquake Damage Detection
 
-This project focuses on automatically assessing earthquake damage using deep learning and unsupervised learning techniques. It first uses MobileNetV2 to determine whether a building is damaged or not. If damage is detected, the system further analyzes the image to estimate the severity level using clustering methods.
+## Project Overview
+This project performs automated earthquake damage assessment using deep learning and unsupervised learning techniques. MobileNetV2 is used to detect whether a building is damaged or undamaged. For damaged buildings, feature extraction and K-Means clustering are used to classify the damage severity.
 
-Instead of relying only on manual inspection, this approach helps in faster and more consistent damage evaluation, which can be useful in disaster response scenarios.
+## Technologies Used
+- Python
+- TensorFlow
+- Keras
+- MobileNetV2
+- Google Colab
+- OpenCV
+- NumPy
+- Matplotlib
+- Scikit-learn
 
-Technologies Used
-Python
-TensorFlow & Keras
-MobileNetV2
-Google Colab
-OpenCV
-NumPy
-Matplotlib
-Scikit-learn
-System Workflow
+## System Workflow
 
 Input Image
 ↓
 MobileNetV2
 ↓
 Damaged / No Damage
+↓
+If No Damage → No Damage
 
-If No Damage → Output: No Damage
-
-If Damaged →
+If Damaged:
 ↓
-Feature Extraction (128-dimensional dense features)
+Feature Extraction (Dense Layer - 128 Features)
 ↓
-StandardScaler (normalization)
+StandardScaler
 ↓
-K-Means Clustering (4 groups)
+K-Means Clustering (4 Clusters)
 ↓
-Damage Level Prediction:
-
 Low Damage
 Moderate Damage
 High Damage
 Severe Damage
 
-Methodology
-Collect and organize the dataset
-Preprocess and prepare images for training
-Train MobileNetV2 for binary classification (damaged vs undamaged)
-Predict whether a building is damaged
-Extract meaningful features from damaged images
-Normalize features for better clustering
-Apply K-Means to group damage severity levels
-Interpret clusters as damage categories
-Evaluate model performance
-Damage Categories
-No Damage
-Low Damage
-Moderate Damage
-High Damage
-Severe Damage
-Author
+## Methodology
+1. Data Collection
+2. Data Preprocessing
+3. MobileNetV2 Model Training
+4. Damage Detection (Damaged / Undamaged)
+5. Feature Extraction from Damaged Images
+6. Feature Normalization using StandardScaler
+7. K-Means Clustering for Damage Severity Classification
+8. Damage Assessment
+9. Performance Evaluation
 
+## Damage Categories
+- No Damage
+- Low Damage
+- Moderate Damage
+- High Damage
+- Severe Damage
+
+## Author
 Aditi Chand
